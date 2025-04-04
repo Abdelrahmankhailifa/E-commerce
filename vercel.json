@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "e-commerce/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "e-commerce/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "e-commerce/$1"
+    }
+  ]
+}
